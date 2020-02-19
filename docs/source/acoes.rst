@@ -1,6 +1,16 @@
 Ações
 -----
 
+Parametriza
+~~~~~~~~~~~
+
+Conforme abordado na seção `Limiares para parametrização do consumo anômalo`_,
+ao pressionar o botão *Parametriza*, são calculados os limiares inferior e
+superior dos valores de consumo anômalo. As variáveis "Fator de singularidade" e
+"Média das derivadas" são ajustes que permitem calibrar estes limiares.
+
+.. _Limiares para parametrização do consumo anômalo: parametrizacao.html
+
 Avalia
 ~~~~~~
 
