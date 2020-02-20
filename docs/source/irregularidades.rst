@@ -64,3 +64,53 @@ primeiro aqueles mais a montante no gráfico das dependências (como
 CONSUMO_OUTLIER), que são os abordados pelos primeiros módulos, e então rodar a
 análise novamente. Neste procedimento sugerido, o último problema que deveria
 ser tratado seria o CONEXAO_PARCIAL_ENTRE_TRAFO_E_CARGA.
+
+O módulo bloco desconexo, em especial, requer alguns preparativos antes de sua
+execução, conforme explicado a seguir.
+
+Bloco desconexo
+~~~~~~~~~~~~~~~
+
+Um bloco pode estar desconexo por falta de trecho ou por existir uma chave
+aberta no único caminho até a fonte. Se for necessário propor um novo trecho, o
+BIAT estima qual é o par de barras que deveria estar conectado, sendo uma das
+barras pertencente ao bloco desconexo (barra desconectada) e a outra ligada ao
+restante da rede (barra conectada).
+
+Nesta heurística, busca-se criar apenas um trecho que:
+
+  - una barras com a mesma tensão, sendo uma delas pertencente ao bloco
+    desconexo;
+  - tenha o menor comprimento possível;
+
+Vários trechos podem estar conectados a uma barra. Cada trecho possui um tipo de
+cabo de fase, um de neutro, e uma configuração de faseamento. Um candidato a
+novo trecho para unir duas barras deve estar condizente com esses trechos já
+existentes. Logo, o trecho novo deve ser tal que atenda todos os critérios para
+ser viável:
+
+  - deve unir barras com a mesma tensão nominal;
+  - deve conter todas as fases que incidem na barra desconectada;
+  - todas essas fases devem estar contidas no conjunto de fases da barra
+    conectada;
+  - O cabo da fase (neutro) de algum trecho da barra conectada deve ser igual ao
+    cabo da fase (neutro) de algum trecho da barra desconectada; 
+  - O trecho novo não deve cruzar as fronteiras de uma quadra (caso ambas as
+    barras estejam fora de quadras).
+
+A avaliação das quadras formadas pela intersecção das ruas requer dados
+georeferenciados do arruamento das áreas por onde passam os circuitos. O BIAT
+possui uma interface com o site OpenStreetMap_ que permite a extração dessas
+informações para a área de abrangência dos circuitos. Após tratamento, esses
+dados são salvos em arquivos formato *GeoJSON*, um para cada circuito, na pasta
+*geodata*. Para rodar esse processo, executar no terminal::
+
+    # Ativar o ambiente virtual
+    venv\Scripts\activate
+
+    # Rodar o biat
+    biat geo
+
+.. _OpenStreetMap: https://www.openstreetmap.org/
+
+.. image:: img/biat_geo.png

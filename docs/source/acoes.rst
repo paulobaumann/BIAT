@@ -14,6 +14,27 @@ superior dos valores de consumo anômalo. As variáveis "Fator de singularidade"
 Avalia
 ~~~~~~
 
+Antes de realizar a avaliação, convém se certificar da presença do arquivo
+*municipios.json* na pasta *geodata*. Este arquivo é usado para indicar, no
+relatório, em que município ocorreu o problema de cadastro encontrado no banco.
+Isto permite uma análise quantitativa de problemas por município, apresentada no
+dashboard_ através de um mapa do estado. Neste mapa, o usuário é capaz de criar
+filtros para visualização dos problemas em regiões por ele definidas. A presença
+desse arquivo e o uso desses filtros não é essencial para a avaliação, mas é um
+recurso que pode ser útil nas análises.
+
+Este arquivo possui formato *GeoJSON*, que é um formato de arquivo GIS
+semelhante ao *Shapefile*. Para os estados brasileiros, com dados provenientes
+do IBGE, ele pode ser obtido no site EarthWorks_ da Stanford University:
+
+.. _EarthWorks: https://earthworks.stanford.edu/
+
+.. image:: img/earthworks1.png
+
+.. image:: img/earthworks2.png
+
+.. image:: img/earthworks3.png
+
 O processo de avaliação, ou seja, execução dos módulos selecionados, é iniciado
 através do botão *Avalia*. Este botão fica habilitado quando existe alguma SE
 selecionada e algum módulo_ marcado. 
@@ -21,9 +42,9 @@ selecionada e algum módulo_ marcado.
 .. image:: img/tela_final.png
 .. _módulo: irregularidades.html
 
-Durante a execução, é exibida uma barra de progresso indicando a porcentagem dos
-circuitos já processada, o tempo restante estimado para conclusão, além do
-circuito sob análise no instante atual. 
+Durante a execução da avaliação, é exibida uma barra de progresso indicando a
+porcentagem dos circuitos já processada, o tempo restante estimado para
+conclusão, além do circuito sob análise no instante atual. 
 
 .. image:: img/progresso.png
 
