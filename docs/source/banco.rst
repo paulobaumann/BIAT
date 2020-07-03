@@ -28,12 +28,25 @@ deles pelo BIAT. Portanto, para evitar esse conflito, devem ser desmarcadas as
 seguintes opções na aba Configuração do importador:
 
 - *Utilizar valores padrão para dados cadastrais inconsistentes*
+- *Validar comprimento dos trechos*
 
 .. image:: img/importador_checkCadZero.png
 
+- *Calcula demanda*
 - *Validar e corrigir fases BT das UTCs e dos Consumidores BT e IP*
+- *Redefinir fases dos consumidores BT*
 
 .. image:: img/importador_checkFasesBT.png
+
+- *Utilizar as coordenadas mais próximas para os cons BT e IP*
+- *Tratar elementos MT isolados*
+- *Tratar elementos BT isolados*
+- *Excluir barras MT isoladas e sem equipamentos*
+- *Simplificação topológica de trechos MT*
+- *Simplificação topológica de trechos BT*
+- *Eliminar redes particulares*
+
+.. image:: img/importador_topo.png
 
 Na aba *Cabos*, selecionar as opções *Sem tratamento de cabos* para cabos MT,
 cabos BT e ramais de ligação.
