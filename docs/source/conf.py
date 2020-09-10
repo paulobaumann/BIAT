@@ -21,7 +21,7 @@ project = 'BIAT'
 copyright = '2020, Daimon Engenharia'
 author = 'Daimon Engenharia'
 version = '1.1'
-release = '1.1.5'
+release = '1.1.7'
 
 # -- General configuration ---------------------------------------------------
 

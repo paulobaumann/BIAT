@@ -27,8 +27,8 @@ estiverem ordenados e não possuírem intervalos maiores que 1 kWh, então a mé
 da derivada dessa curva será 1. Nesse caso extremo, não há descontinuidade nas
 observações, logo nenhum indício da presença de outliers.
 
-A diminuição do limiar inferior para o fator de singularidade e/ou a elevação do
-limiar superior da média da derivada dá margem para a realização de mais
+A elevação do limiar superior para o fator de singularidade e/ou a diminuição do
+limiar inferior da média da derivada dá margem para a realização de mais
 iterações, buscando limiares mais próximos dos valores de consumo,
 consequentemente aumentando o número de observações classificadas como outlier. 
 
