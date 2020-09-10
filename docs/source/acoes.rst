@@ -66,7 +66,8 @@ Após a execução, a visualização dos resultados contidos no arquivo gerado p
 ser feita através do botão *Resultados*. Ao pressioná-lo, o usuário pode
 escolher abrir o relatório externamente (em um browser), ou no próprio programa.
 O conteúdo exibido é o mesmo, mas o desempenho do browser para interagir com os
-gráficos e tabelas é superior, sendo assim a forma indicada de visualização.
+gráficos é superior, sendo assim a forma indicada de visualização para volumes
+grandes de informação.
 
 .. image:: img/dashboard_abrir.png
 
@@ -76,21 +77,14 @@ vários segundos, tendo em vista a complexidade das funcionalidades que ele
 apresenta.
 
 O relatório contém diversos gráficos resumindo os problemas identificados no
-banco de dados, seguido por tabelas, separadas por tipo de problema, que trazem
-as informações individualizadas:
+banco de dados, separadas por tipo de problema, que trazem as informações
+individualizadas:
 
 .. image:: img/dashboard.png
 
 Os gráficos são interativos, permitindo a aplicação de filtros clicando sobre
 seus elementos (barras, áreas, setores etc) que influenciam tanto na exibição do
-gráfico manipulado quanto nos demais, além das informações apresentadas nas
-tabelas.
-
-Existem tabelas para cada tipo de problema analisado. Através dos comandos
-localizados acima de cada uma delas, é possivel exportar seus dados diretamente
-para XLSX, CSV ou PDF.
-
-.. image:: img/dashboard_tabela.png
+gráfico manipulado quanto nos demais.
 
 Planilha
 ~~~~~~~~
