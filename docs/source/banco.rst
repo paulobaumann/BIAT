@@ -20,6 +20,15 @@ conectar com o banco informado:
 
 .. image:: img/importador_output.png
 
+Nos circuitos em que há subestação filha, eles deverão ser importados como
+alimentadores separados. Isto é necessário pois a informação da conexão elétrica
+entre tais subestações ainda não está sendo disponibilizada no *todos.mdb*.
+Contudo, como nenhum módulo do BIAT faz uso de cálculo elétrico, isto não
+compromete as análises realizadas. Assim, na aba Configuração do importador,
+desmarcar a opção:
+
+- *Processamento automático de subestações filhas*
+
 O importador, por padrão, realiza diversos procedimentos para correção
 automática de dados inconsistentes, permitindo que o usuário consiga carregar a
 rede elétrica no Interplan ou Pertec com pouco esforço. No entanto, isto acaba
